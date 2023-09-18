@@ -2,7 +2,7 @@ from transformers import BertModel
 import torch
 from torch import nn
 
-class NER_Model(nn.Module):
+class NERModel(nn.Module):
     def __init__(self, num_labels):
         super(NERModel, self).__init__()
         self.bert = BertModel.from_pretrained("bert-base-uncased")
