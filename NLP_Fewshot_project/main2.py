@@ -15,7 +15,7 @@ import os
 def main():
     num_classes = 26  # Update this with the actual number of classes
     # model=Model() #our model from model.py
-    model = NER_Model(num_classes)  # Create the NER model with BiLSTM from model.py
+    model = NERModel(num_classes)  # Create the NER model with BiLSTM from model.py
     max_len=512 #max sequence length, this is bert's max
     batch_size=1 #batch size for the model, 15 max
     filename_to_t_and_l = {} #mapping file names to tokens and labels
