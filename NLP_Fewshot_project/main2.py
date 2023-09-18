@@ -209,7 +209,8 @@ def main():
         val_f1_history.append(val_f1)
         val_accuracy = accuracy_score(all_labels, all_predictions)
         val_accuracy_history.append(val_accuracy)
-
+        
+        val_f1 = f1_score(all_labels, all_predictions, average='weighted')
         print(f"Epoch {epoch + 1}/{epochs}, Train Loss: {avg_loss:.4f}, Validation Loss: {avg_val_loss:.4f}, Validation F1: {val_f1:.4f}, Validation Accuracy: {val_accuracy:.4f}")
 
     # Plot training history
